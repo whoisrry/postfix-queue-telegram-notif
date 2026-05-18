@@ -41,5 +41,13 @@ A lightweight script to monitor the Postfix mail queue and send an alert via Tel
    */5 * * * * /usr/local/bin/monit.sh >/dev/null 2>&1
    ```
 
+## Auto-Update
+The script includes an automated update mechanism that fetches the latest version from GitHub while preserving your local variables (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, and `QUEUE_THRESHOLD`).
+
+To update the script, run:
+```bash
+/usr/local/bin/monit.sh update
+```
+
 ## Requirements
 The script uses standard Linux tools: `bash`, `postqueue`, `grep`, `awk`, `tail`, `sort`, `uniq`, `head`, and `curl`. No additional dependencies are required.

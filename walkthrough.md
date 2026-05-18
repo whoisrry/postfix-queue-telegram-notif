@@ -24,3 +24,7 @@
 - If threshold is exceeded, extract top senders from stored output using a single `awk` statement.
 - Prepare alert message as an in-memory variable.
 - Send Telegram alert using `curl` with `--data-urlencode` for safe payload transmission.
+
+### Lifecycle Management
+- Added a self-updating mechanism accessible via `monit.sh update`.
+- Fetches the latest version from GitHub, compares `#VERSION=`, and if newer, dynamically injects the existing `QUEUE_THRESHOLD`, `TELEGRAM_BOT_TOKEN`, and `TELEGRAM_CHAT_ID` before replacing the current executable.

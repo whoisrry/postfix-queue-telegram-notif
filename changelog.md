@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.3] - 2026-05-18
+- feat: add auto-update mechanism using `monit.sh update` to pull latest script from remote while preserving local configuration variables.
+
 ## [1.2] - 2026-05-18
 - feat: inject `PATH` to automatically support root crontab execution and Zimbra's custom `postqueue` paths.
 
