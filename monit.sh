@@ -1,5 +1,8 @@
 #!/bin/bash
-#VERSION=1.1
+#VERSION=1.2
+
+# Ensure postqueue is in PATH for root cron and Zimbra environments
+export PATH="/opt/zimbra/common/sbin:/opt/zimbra/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 QUEUE_THRESHOLD=100
 TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN_HERE"

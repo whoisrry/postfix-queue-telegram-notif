@@ -10,6 +10,13 @@
 - Write alert message to a temporary file on disk.
 - Read temporary file to send Telegram alert via `curl`.
 
+### Documentation
+- Created `README.md` to document prerequisites, setup instructions, configuration variables, and crontab deployment.
+- Updated `README.md` to indicate implicit support for Zimbra and root cron execution.
+
+### Environment Management
+- Injected `export PATH` directly into `monit.sh` to ensure `/opt/zimbra/...` and `/usr/local/sbin` binaries (like `postqueue`) are available, specifically bypassing standard `cron` environment limitations.
+
 ### Optimized Flow
 - Execute `postqueue -p` **once** and store output in memory.
 - Check stored output for empty queue.
